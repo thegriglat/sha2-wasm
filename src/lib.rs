@@ -1,6 +1,6 @@
 mod utils;
 
-use wasm_bindgen::prelude::*;
+use wasm_bindgen::prelude::wasm_bindgen;
 
 use sha2::{Digest, Sha256, Sha512};
 
@@ -14,22 +14,12 @@ static ALLOC: wee_alloc::WeeAlloc = wee_alloc::WeeAlloc::INIT;
 pub fn sha256(s: String) -> String {
     let mut hasher = Sha256::new();
     hasher.update(s);
-    let result = hasher.finalize();
-    result
-        .iter()
-        .map(|b| format!("{:02x}", b).to_string())
-        .collect::<Vec<String>>()
-        .join("")
+    format!("{:x}",  hasher.finalize())
 }
 
 #[wasm_bindgen]
 pub fn sha512(s: String) -> String {
     let mut hasher = Sha512::new();
     hasher.update(s);
-    let result = hasher.finalize();
-    result
-        .iter()
-        .map(|b| format!("{:02x}", b).to_string())
-        .collect::<Vec<String>>()
-        .join("")
+    format!("{:x}", hasher.finalize())
 }
