@@ -1,6 +1,8 @@
 # sha2-wasm
 
-A simple library to calculate sha256 and sha512 hashes from `string` built with Rust+WASM
+A simple library to calculate sha256 and sha512 hashes from `string` built with Rust+Wasm
+
+Compiled to be used with Node.js.
 
 ## Installation
 

@@ -1,6 +1,6 @@
 [package]
 name = "sha2-wasm"
-version = "1.0.0"
+version = "1.0.1"
 authors = ["Grigory Latyshev <thegriglat@gmail.com>"]
 repository = "https://github.com/thegriglat/sha2-wasm"
 edition = "2018"
