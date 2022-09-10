@@ -1,9 +1,12 @@
 [package]
 name = "sha2-wasm"
-version = "1.0.2"
+version = "1.0.3"
+description = "A simple SHA-256/SHA-512 hasher library"
 authors = ["Grigory Latyshev <thegriglat@gmail.com>"]
 repository = "https://github.com/thegriglat/sha2-wasm"
 edition = "2018"
+keywords = ["wasm", "sha256", "sha512"]
+license = "MIT OR Apache-2.0"
 
 [lib]
 crate-type = ["cdylib", "rlib"]
